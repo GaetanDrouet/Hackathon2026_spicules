@@ -8,7 +8,7 @@ Deux techniques ont été testées sur ce jeu de données.
 ### YOLO cls
 Une première technique utilise un modèle de [YOLO cls](https://docs.ultralytics.com/tasks/classify/) pour classifier automatiquement les images en deux classes : sans spicule et avec spicule. Pour cela, une première phase de répartition de données en Train, Test et Val est effectuée ainsi qu'une normalisation des données afin d'avoir autant d'images de chaque classe. Les images ultérieures peuvent ensuite être classées autmatiquement au moyen de ce modèle.
 ### Transport optimal
-Après un prétraitement, 3 images variées des deux types sont extraites afin de servir d'exemples. Les images à tester sont ensuite comparées à ces images et un calcul de minimisation du coût de transport (entre les images tests et les images étalons) établit dans quelle classe celles-ci sont à placer. Nous conjecturons que l'implémentation n'est pas bonne (bien trop naïve) mais l'idée sous-jacente vaut sans doute le coup d'être étudiée.
+Après un prétraitement, 3 images variées des deux types sont extraites afin de servir d'exemples. Les images à tester sont ensuite comparées à ces images et un calcul de minimisation du coût de transport (entre les images tests et les images étalons) établit dans quelle classe celles-ci sont à placer. Nous conjecturons que l'implémentation n'est pas bonne (bien trop naïve) mais l'idée sous-jacente vaut sans doute le coup d'être étudiée. Mis à part l'utilisation de filtres plus adaptés ainsi qu'une segmentation de l'image de meilleure qualité, nous ne voyons pas d'amélioration immédiate et à moindre frais.
 
 ## Résultats
 ### YOLO cls
